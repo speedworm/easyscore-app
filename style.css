@@ -28,9 +28,7 @@ body {
 header, main, footer { max-width: 820px; margin: 0 auto; padding: 0 16px; }
 header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 20px; flex-wrap: wrap; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; color: var(--text); text-decoration: none; }
-.logo { width: 34px; height: 34px; border-radius: 9px; overflow: hidden; display: grid; grid-template-rows: 1fr 1fr; }
-.logo span:first-child { background: var(--accent); }
-.logo span:last-child { background: var(--accent2); }
+.logo { width: 34px; height: 34px; border-radius: 8px; display: block; }
 nav a { color: var(--muted); text-decoration: none; margin-left: 16px; font-size: 15px; }
 nav a:hover, nav a[aria-current] { color: var(--text); }
 .lang { font-size: 14px; }
