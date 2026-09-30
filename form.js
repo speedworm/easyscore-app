@@ -1,6 +1,6 @@
 // Support form: requests are relayed by e-mail through Web3Forms.
 // The access key only identifies the form; the receiving address stays private.
-const WEB3FORMS_KEY = "WEB3FORMS_ACCESS_KEY";
+const WEB3FORMS_KEY = "f7115c59-1b8b-4f0c-baed-cd2a6921517d";
 
 document.querySelectorAll("form.support").forEach((form) => {
   const status = form.querySelector(".status");
