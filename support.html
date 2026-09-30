@@ -17,9 +17,34 @@
   <h1>Support</h1>
   <p class="lead">Answers to common questions, and how to reach us.</p>
 
-  <div class="card">
-    <h3>Contact</h3>
-    <p>For a question, a problem or an idea, <a href="https://github.com/speedworm/easyscore-app/issues/new">open a request here</a>. Please mention your iPhone and Apple Watch models and their iOS and watchOS versions.</p>
+  <div class="card" id="contact">
+    <h3>Contact us</h3>
+    <p class="muted">A question, a problem or an idea? Write to us, we usually answer within a few days.</p>
+    <form class="support" data-sending="Sending…" data-sent="Thank you! Your message has been sent. We will answer by e-mail." data-failed="Sorry, the message could not be sent. Please try again in a moment.">
+      <label>Topic
+        <select name="topic" required>
+          <option>Question</option>
+          <option>Problem</option>
+          <option>Idea</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <label>Your e-mail <span class="optional">(to receive our answer)</span>
+        <input type="email" name="email" required autocomplete="email">
+      </label>
+      <label>Your name <span class="optional">(optional)</span>
+        <input type="text" name="name" autocomplete="name">
+      </label>
+      <label>Your devices <span class="optional">(optional, e.g. iPhone 15, iOS 18, Apple Watch Series 9, watchOS 11)</span>
+        <input type="text" name="devices">
+      </label>
+      <label>Message
+        <textarea name="message" required></textarea>
+      </label>
+      <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
+      <button type="submit" class="button">Send</button>
+      <p class="status" role="status" aria-live="polite"></p>
+    </form>
   </div>
 
   <h2>Questions</h2>
@@ -49,5 +74,6 @@
   <p>The live score needs the iPhone to be nearby with Bluetooth on. Finished matches are sent as soon as the iPhone is reachable again.</p>
 </main>
 <footer>© 2026 Vertinence · <a href="./">Home</a> · <a href="privacy.html">Privacy Policy</a></footer>
+<script src="form.js"></script>
 </body>
 </html>

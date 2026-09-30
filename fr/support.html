@@ -17,9 +17,34 @@
   <h1>Assistance</h1>
   <p class="lead">Les réponses aux questions fréquentes, et comment nous joindre.</p>
 
-  <div class="card">
-    <h3>Contact</h3>
-    <p>Pour une question, un problème ou une idée, <a href="https://github.com/speedworm/easyscore-app/issues/new">envoyez une demande ici</a>. Précisez vos modèles d'iPhone et d'Apple Watch et leurs versions d'iOS et de watchOS.</p>
+  <div class="card" id="contact">
+    <h3>Nous écrire</h3>
+    <p class="muted">Une question, un problème ou une idée ? Écrivez-nous, nous répondons en général sous quelques jours.</p>
+    <form class="support" data-sending="Envoi en cours…" data-sent="Merci ! Votre message est envoyé. Nous vous répondrons par e-mail." data-failed="Désolé, le message n'a pas pu être envoyé. Réessayez dans un instant.">
+      <label>Sujet
+        <select name="topic" required>
+          <option value="Question">Question</option>
+          <option value="Problème">Problème</option>
+          <option value="Idée">Idée</option>
+          <option value="Autre">Autre</option>
+        </select>
+      </label>
+      <label>Votre e-mail <span class="optional">(pour recevoir notre réponse)</span>
+        <input type="email" name="email" required autocomplete="email">
+      </label>
+      <label>Votre nom <span class="optional">(facultatif)</span>
+        <input type="text" name="name" autocomplete="name">
+      </label>
+      <label>Vos appareils <span class="optional">(facultatif, par ex. iPhone 15, iOS 18, Apple Watch Series 9, watchOS 11)</span>
+        <input type="text" name="devices">
+      </label>
+      <label>Message
+        <textarea name="message" required></textarea>
+      </label>
+      <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
+      <button type="submit" class="button">Envoyer</button>
+      <p class="status" role="status" aria-live="polite"></p>
+    </form>
   </div>
 
   <h2>Questions</h2>
@@ -49,5 +74,6 @@
   <p>Le score en direct demande un iPhone à proximité, Bluetooth activé. Les matchs terminés sont envoyés dès que l'iPhone est de nouveau joignable.</p>
 </main>
 <footer>© 2026 Vertinence · <a href="./">Accueil</a> · <a href="privacy.html">Politique de confidentialité</a></footer>
+<script src="../form.js"></script>
 </body>
 </html>
